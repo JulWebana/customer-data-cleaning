@@ -5,8 +5,8 @@ name: Tests Automatiques
 on: [push, pull_request]
 
 jobs:
-  test:                                     # Nom du job
-    runs-on: ubuntu-latest                  # Spécifie l’environnement de travail (machine virtuelle Ubuntu)
+  test:                                     # Définition du job nommé "test"
+    runs-on: ubuntu-latest                  # Utilise la dernière version d'Ubuntu comme machine d'exécution
 
     steps:
 
@@ -14,20 +14,31 @@ jobs:
       - name: Récupération du code
         uses: actions/checkout@v3
 
-      # Step 2 : Installer Python 
+
+      # Step 2 : Installation de l'environnement Python
       - name: Installation de Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.12'
+          python-version: '3.12'              # Spécifie la version de Python à utiliser  
 
-      # Step 3 : Installer les dépendances du projet
-      - name: Installer les dépendances
+
+      # Step 3 : Installation des dépendances listées dans requirements.txt
+      - name: Installation les dépendances
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # # Step 4 : Lancer les tests avec couverture
-      - name: Exécuter les tests unitaires
+
+      # Step 4 : Exécution des tests unitaires avec couverture de code
+      - name: Lancer les tests unitaires avec pytest
         run: |
-          python -m pytest --cov=src tests/        
+          python -m pytest --cov=src tests/
+          
+      # Step 5 : Sauvegarde du fichier nettoyé en tant qu'artefact GitHub
+      - name: Upload du fichier cleaned_customers.csv comme artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: cleaned-customer-data               # Nom visible dans l'onglet Actions > Artifacts
+          path: data/cleaned_customers.csv          # Fichier à livrer automatiquement
+
 
