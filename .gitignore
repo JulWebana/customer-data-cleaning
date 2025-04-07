@@ -1,0 +1,6 @@
+__pycache__/        # Ignore le dossier __pycache__, crées automatiquement par Python pour stocker les fichiers compilés (.pyc).
+*.pyc               # Ignore les fichiers de cache Python. Ils sont générés par l'interpréteur Python pour stocker des informations de compilation.
+.env                # Ignore le fichier d'environnement virtuel. Fichier souvent utilisé pour stocker des variables d_environnement comme des mots de passe, des clés API, ou des config locales.
+*.csv               # Ignore tous les fichiers CSV, comme des fichiers de données brutes ou temporaires.
+.coverage           # Ignore le fichier de couverture de test.  Fichier généré quand t'on exécutes pytest --cov=....
+htmlcov/            # Dossier généré lorsqu'on crées un rapport HTML de la couverture de code (pytest --cov --cov-report=html).
