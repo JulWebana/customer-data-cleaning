@@ -19,6 +19,7 @@ Un projet complet de Data Engineering pour nettoyer, valider et fiabiliser des d
 
 ## Structure du projet
 
+```
 customer-data-cleaning/
 ├── src/                                        # Module de nettoyage
 │   └── cleaning.py
@@ -33,8 +34,8 @@ customer-data-cleaning/
 └── .github/
     └── workflows/                              # Workflow GitHub Actions CI 
         └── ci.yml
-
-
+```
+       
 ---
 
 ## Commençons par lancer le projet localement
