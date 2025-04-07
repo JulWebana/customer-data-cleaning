@@ -36,7 +36,7 @@ jobs:
           
       # Step 5 : Sauvegarde du fichier nettoyé en tant qu'artefact GitHub
       - name: Upload du fichier cleaned_customers.csv comme artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: cleaned-customer-data               # Nom visible dans l'onglet Actions > Artifacts
           path: data/cleaned_customers.csv          # Fichier à livrer automatiquement
