@@ -19,23 +19,25 @@ Un projet complet de Data Engineering pour nettoyer, valider et fiabiliser des d
 
 ## Structure du projet
 
-customer-data-cleaning/ 
-├── src/                                        # Module de nettoyage 
-│ └── cleaning.py 
+customer-data-cleaning/
+├── src/                                        # Module de nettoyage
+│   └── cleaning.py
 ├── tests/                                      # Tests unitaires avec pytest 
-│ └── test_cleaning.py 
+│   └── test_cleaning.py
 ├── data/                                       # Données brutes et nettoyées 
-│ ├── raw_customers.csv 
-│ └── cleaned_customers.csv 
+│   ├── raw_customers.csv
+│   └── cleaned_customers.csv
 ├── run_cleaning.py                             # Script principal de traitement 
 ├── requirements.txt                            # Dépendances du projet 
-├── .github/workflows/                          # Workflow GitHub Actions CI 
-│ └── ci.yml
+├── .gitignore
+└── .github/
+    └── workflows/                              # Workflow GitHub Actions CI 
+        └── ci.yml
 
 
 ---
 
-## Coomençons par lancer le projet localement
+## Commençons par lancer le projet localement
 
 1. **Cloner le projet**
 
@@ -89,7 +91,7 @@ John Doe,john@mail.com,0612345678,1990-01-01
 
 ---
 
-6. **Intégration Continue**
+## Intégration Continue
 
 Les tests sont automatiquement exécutés à chaque push grâce à GitHub Actions. 
 Voir l’onglet Actions du dépôt.
