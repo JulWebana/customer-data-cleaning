@@ -1,6 +1,6 @@
-# Customer Data Cleaning Pipeline
+# Customer Data Cleaning Pipeline with unit tests and CI/CD
 
-Un projet complet de Data Engineering pour nettoyer, valider et fiabiliser des données CRM. Construit avec Python, pytest et GitHub Actions, il démontre une approche rigoureuse et automatisée du traitement de données.
+Un pipeline de nettoyage et validation de données clients (CRM) avec tests automatisés et CI/CD via GitHub Actions. Il démontre une approche rigoureuse et automatisée du traitement de données.
 
 
 ![CI](https://github.com/JulWebana/customer-data-cleaning/actions/workflows/ci.yml/badge.svg)
